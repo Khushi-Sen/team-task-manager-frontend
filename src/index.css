@@ -3,19 +3,18 @@
 @tailwind utilities;
 
 body {
-  @apply bg-slate-100 text-slate-800 font-sans;
+  margin: 0;
+  font-family: Inter, sans-serif;
+  background: linear-gradient(to bottom right, #eef2ff, #e9d5ff);
+  min-height: 100vh;
 }
 
 .card {
-  @apply bg-white rounded-2xl shadow-lg p-6 border border-slate-200;
+  @apply bg-white rounded-2xl shadow-xl p-8 border border-slate-200;
 }
 
 .btn-primary {
   @apply bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-5 py-3 rounded-xl hover:scale-105 transition duration-300 font-semibold;
-}
-
-.btn-secondary {
-  @apply bg-slate-800 text-white px-4 py-2 rounded-xl hover:bg-slate-700 transition;
 }
 
 .input {
