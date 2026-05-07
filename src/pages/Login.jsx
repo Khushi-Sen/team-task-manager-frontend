@@ -10,9 +10,19 @@ export default function Login() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const res = await API.post('/auth/login', form);
-    login(res.data);
-    navigate('/dashboard');
+
+    try {
+      const res = await API.post('/auth/login', form);
+
+      if (res.status === 200) {
+        login(res.data);
+        navigate('/dashboard');
+      }
+
+    } catch (error) {
+      alert("Wrong password or user does not exist!");
+      console.error(error);
+    }
   };
 
   return (
